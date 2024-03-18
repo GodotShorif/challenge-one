@@ -14,6 +14,10 @@ config/name="StarterProject"
 run/main_scene="res://scenes/MainGame.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+GlobalSignals="*res://autoLoad/global_signals.gd"
+
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true

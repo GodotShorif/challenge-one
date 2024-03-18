@@ -1,8 +1,60 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/UI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Score.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/MainasScore.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/MainasScore.gd" type="Script" id=5]
 
 [node name="MainGame" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 514, 295 )
+
+[node name="UI" parent="." instance=ExtResource( 2 )]
+
+[node name="Score_count" type="Node2D" parent="."]
+
+[node name="Score" parent="Score_count" instance=ExtResource( 3 )]
+position = Vector2( 499, 67 )
+
+[node name="Score2" parent="Score_count" instance=ExtResource( 3 )]
+position = Vector2( 100, 166 )
+
+[node name="Score3" parent="Score_count" instance=ExtResource( 3 )]
+position = Vector2( 690, 254 )
+
+[node name="Score4" parent="Score_count" instance=ExtResource( 3 )]
+position = Vector2( 175, 486 )
+
+[node name="Score5" parent="Score_count" instance=ExtResource( 3 )]
+position = Vector2( 743, 527 )
+
+[node name="Score6" parent="Score_count" instance=ExtResource( 3 )]
+position = Vector2( 489, 466 )
+
+[node name="MainasScore" parent="." instance=ExtResource( 4 )]
+position = Vector2( 349, 182 )
+script = ExtResource( 5 )
+
+[node name="MainasScore2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 809, 158 )
+script = ExtResource( 5 )
+
+[node name="MainasScore3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 812, 380 )
+script = ExtResource( 5 )
+
+[node name="MainasScore4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 206, 333 )
+script = ExtResource( 5 )
+
+[node name="MainasScore5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 358, 549 )
+script = ExtResource( 5 )
+
+[connection signal="body_entered" from="MainasScore" to="MainasScore" method="_on_MainasScore_body_entered"]
+[connection signal="body_entered" from="MainasScore2" to="MainasScore2" method="_on_MainasScore_body_entered"]
+[connection signal="body_entered" from="MainasScore3" to="MainasScore3" method="_on_MainasScore_body_entered"]
+[connection signal="body_entered" from="MainasScore4" to="MainasScore4" method="_on_MainasScore_body_entered"]
+[connection signal="body_entered" from="MainasScore5" to="MainasScore5" method="_on_MainasScore_body_entered"]
