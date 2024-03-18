@@ -7,5 +7,5 @@ signal hint()
 
 signal MainasScoe()
 
-
+signal Score()
 
