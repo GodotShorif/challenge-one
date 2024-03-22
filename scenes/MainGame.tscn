@@ -9,11 +9,11 @@
 
 [node name="MainGame" type="Node2D"]
 
-[node name="Player" parent="." groups=["player 1", "player 2"] instance=ExtResource( 1 )]
+[node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 514, 295 )
 
-[node name="player2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 351, 60 )
+[node name="player2" parent="." groups=["player2"] instance=ExtResource( 6 )]
+position = Vector2( 427, 250 )
 
 [node name="UI" parent="." instance=ExtResource( 2 )]
 
@@ -21,45 +21,60 @@ position = Vector2( 351, 60 )
 position = Vector2( 1, 19 )
 
 [node name="Score" parent="Score_count" instance=ExtResource( 3 )]
-position = Vector2( 499, 67 )
+position = Vector2( 543, 118 )
 
 [node name="Score2" parent="Score_count" instance=ExtResource( 3 )]
-position = Vector2( 100, 166 )
+position = Vector2( 65, 158 )
 
 [node name="Score3" parent="Score_count" instance=ExtResource( 3 )]
-position = Vector2( 690, 254 )
+position = Vector2( 249, 217 )
 
 [node name="Score4" parent="Score_count" instance=ExtResource( 3 )]
-position = Vector2( 175, 486 )
+position = Vector2( 199, 476 )
 
 [node name="Score5" parent="Score_count" instance=ExtResource( 3 )]
-position = Vector2( 743, 527 )
+position = Vector2( 749, 405 )
 
 [node name="Score6" parent="Score_count" instance=ExtResource( 3 )]
-position = Vector2( 489, 466 )
+position = Vector2( 646, 239 )
 
 [node name="MainasScore" parent="." instance=ExtResource( 4 )]
-position = Vector2( 349, 182 )
+position = Vector2( 362, 134 )
 script = ExtResource( 5 )
 
 [node name="MainasScore2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 809, 158 )
+position = Vector2( 728, 150 )
+script = ExtResource( 5 )
+
+[node name="MainasScore7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 452, 526 )
+script = ExtResource( 5 )
+
+[node name="MainasScore8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 896, 136 )
 script = ExtResource( 5 )
 
 [node name="MainasScore3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 812, 380 )
+position = Vector2( 559, 430 )
 script = ExtResource( 5 )
 
 [node name="MainasScore4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 211, 323 )
+position = Vector2( 81, 320 )
+script = ExtResource( 5 )
+
+[node name="MainasScore6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 849, 309 )
 script = ExtResource( 5 )
 
 [node name="MainasScore5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 350, 529 )
+position = Vector2( 334, 404 )
 script = ExtResource( 5 )
 
 [connection signal="body_entered" from="MainasScore" to="MainasScore" method="_on_MainasScore_body_entered"]
 [connection signal="body_entered" from="MainasScore2" to="MainasScore2" method="_on_MainasScore_body_entered"]
+[connection signal="body_entered" from="MainasScore7" to="MainasScore7" method="_on_MainasScore_body_entered"]
+[connection signal="body_entered" from="MainasScore8" to="MainasScore8" method="_on_MainasScore_body_entered"]
 [connection signal="body_entered" from="MainasScore3" to="MainasScore3" method="_on_MainasScore_body_entered"]
 [connection signal="body_entered" from="MainasScore4" to="MainasScore4" method="_on_MainasScore_body_entered"]
+[connection signal="body_entered" from="MainasScore6" to="MainasScore6" method="_on_MainasScore_body_entered"]
 [connection signal="body_entered" from="MainasScore5" to="MainasScore5" method="_on_MainasScore_body_entered"]

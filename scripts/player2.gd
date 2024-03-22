@@ -19,7 +19,6 @@ func _process(delta):
 		direction.x = -1
 	if Input.is_action_pressed("right_p1"):
 		direction.x = 1
-
 	
 	
 	direction = direction.normalized()
